@@ -66,9 +66,9 @@ def drawTable(a, v, av):
 # DATA 
 
 # Hypothetical Data 
-# a_params = [0.10, 0.30, 0.50, 0.70, 0.90] 
-# v_params = [0.05, 0.2, 0.45, 0.75, 0.80] 
-# av_actual = [0.05, 0.15, 0.25, 0.75, 0.95, 0.15, 0.35, 0.50, 0.70, 0.85, 0.10, 0.30, 0.50, 0.70, 0.90, 0.20, 0.40, 0.60, 0.80, 0.90, 0.30, 0.45, 0.75, 0.85, 0.95]
+# a_original = [0.10, 0.30, 0.50, 0.70, 0.90] 
+# v_original = [0.05, 0.2, 0.45, 0.75, 0.80] 
+# av_original = [0.05, 0.15, 0.25, 0.75, 0.95, 0.15, 0.35, 0.50, 0.70, 0.85, 0.10, 0.30, 0.50, 0.70, 0.90, 0.20, 0.40, 0.60, 0.80, 0.90, 0.30, 0.45, 0.75, 0.85, 0.95]
 
 # Real Data 
 a_original = [0.01, 0.04, 0.23, 0.94, 0.99]
@@ -96,10 +96,13 @@ av_opt = optimized_prediction[10:]
 
 # Print Tables
 print()
-print("Original")
+print("Original Data")
 drawTable(a_original, v_original, av_original)
 print()
-print("Optimal")
+print("Initial Prediction")
+drawTable(a_original, v_original, original_prediction[10:])
+print()
+print("Optimal Prediction")
 drawTable(a_opt, v_opt, av_opt)
 
 # Print Parameters
@@ -112,11 +115,11 @@ print("Optimal V Values", v_opt)
 
 # Print RMSDs
 print()
-print("Original RMSD")
+print("Original Prediction RMSD")
 residuals = getResiduals(original_table, original_prediction)
 getRMSD(residuals)
 print()
-print("Optimized RMSD")
+print("Optimized Prediction RMSD")
 residuals = getResiduals(original_table, optimized_prediction)
 getRMSD(residuals)
 
