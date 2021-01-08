@@ -2,7 +2,7 @@
 FLMP Model Fitting Results 12/22/2020
 https://github.com/skyler-stewart/FLMPModelFitting
 
----------------------------------------------------------------------------------------------------------------------
+
 NOTES 
 
 Original Data: provided a values, provided v values, provided av values. This (all 35 points) is the data we fit to.
@@ -12,7 +12,7 @@ Optimal Prediction: optimal a values, optimal v values plugged into Bayes equati
 Optimal values are obtained using scipy least squares optimization: 
 https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html 
 
----------------------------------------------------------------------------------------------------------------------
+
 REAL DATA 
 
 Original Data
@@ -43,7 +43,7 @@ V5    0.288881  0.568601  0.869836  0.992316  0.997352  0.991013
 None  0.028722  0.101937  0.297160  0.729139  0.773540       NaN
 
 Original A Values  [0.01, 0.04, 0.23, 0.94, 0.99]
-Optimal A Values  [0.028721909577822422, 0.10193741356031735, 0.29715987084894674, 0.7291387320419169, 0.773540059893735]
+Optimal A Values [0.028721909577822422, 0.10193741356031735, 0.29715987084894674, 0.7291387320419169, 0.773540059893735]
 
 Original V Values [0.03, 0.44, 0.82, 0.93, 0.97]
 Optimal V Values [0.10628749902127614, 0.27842956948855396, 0.661749875235647, 0.9742328456265189, 0.9910134944202]
@@ -54,7 +54,7 @@ RMSD  0.050165140751868
 Optimized Prediction RMSD
 RMSD  0.006999874229886913
 
----------------------------------------------------------------------------------------------------------------------
+
 HYPOTHETICAL DATA  
 
 Original Data
@@ -96,4 +96,6 @@ RMSD  0.029931049605282693
 Optimized Prediction RMSD
 RMSD  0.005782835145132252
 
----------------------------------------------------------------------------------------------------------------------
+
+
+

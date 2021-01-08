@@ -10,6 +10,7 @@ from scipy.optimize import curve_fit, least_squares
 def fitModel(params, actualvalues):
 	getRApplied = lambda p: getResiduals(actualvalues, p)
 	result = least_squares(getRApplied, params, jac='3-point', bounds=(0,1))
+	print(result)
 	return list(result.x)
 
 # Outputs a list of predicted av values (using Bayes theorem)
@@ -20,13 +21,12 @@ def generatePrediction(a_params, v_params):
 		for v in v_params:
 			value = (a*v) / ((a*v) + ((1-a) * (1-v)))
 			predicted_values.append(value)	
-			#predicted_values.append(round(value, 2))	
 
 	# Return predicted values
 	return a_params + v_params + predicted_values
 
 # Compute and print residuals (actual - predicted)
-# actualdata: data we fit to
+# actualdata: data we fit to (all 35)
 # args: params (list of a and v)
 def getResiduals(actualdata, args): 
 	# Generate prediction 
@@ -43,7 +43,7 @@ def getResiduals(actualdata, args):
 
 	return residuals
 
-# Gets and prints the RMSD for a list of residuals
+# Gets and prints the RMSD given a list of residuals
 def getRMSD(residuals):
 	rmsd = sum([x**2 for x in residuals])/len(residuals)
 	print("RMSD ", rmsd)
@@ -53,6 +53,10 @@ def drawTable(a, v, av):
 	cols = ["A1", "A2", "A3", "A4", "A5", "None"]
 	rows = ["V1", "V2", "V3", "V4", "V5", "None"]
 
+	a = [round(i, 3) for i in a]
+	v = [round(j, 3) for j in v]
+	av = [round(k, 3) for k in av]
+	
 	groups = [av[i:i+5] for i in range(0, 25, 5)]
 	groups.append(a)
 	for i in range(0, 5):
