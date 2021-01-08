@@ -29,4 +29,4 @@ def scModel(a_params, v_params, bias):
 
 
 # The model we want to use. 
-MODEL = flmpModel
+MODEL = scModel
