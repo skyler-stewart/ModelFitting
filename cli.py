@@ -3,7 +3,6 @@ cli.py
 Command line interface for model fitting.
 '''
 
-
 # Main + user options 
 def runModelFitting(*args):
 	pass  
@@ -20,5 +19,4 @@ def getDataFromFile(filename):
 def generateReport(outfile): 
 	pass
 
-# Displays user options, data formatting, and general usage
-def usage(): 
+

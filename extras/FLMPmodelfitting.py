@@ -4,6 +4,7 @@ modelfitting.py
 
 import pandas as pd 
 from scipy.optimize import curve_fit, least_squares
+import math
 
 # Uses scipy's least squares optimization 
 # https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html
@@ -45,7 +46,7 @@ def getResiduals(actualdata, args):
 
 # Gets and prints the RMSD given a list of residuals
 def getRMSD(residuals):
-	rmsd = sum([x**2 for x in residuals])/len(residuals)
+	rmsd = math.sqrt(sum([x**2 for x in residuals])/len(residuals))
 	print("RMSD ", rmsd)
 	return rmsd
 
