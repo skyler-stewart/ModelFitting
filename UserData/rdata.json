@@ -1,0 +1,26 @@
+[
+{
+"name": "composite", 
+"label": "Bimodal",
+"abbreviation": "AV",
+"data": [0.02, 0.02, 0.07, 0.53, 0.76, 0.03, 0.09, 0.20, 0.81, 0.94, 0.13, 0.20, 0.46, 0.96, 0.99, 0.27, 0.41, 0.68, 0.96, 0.99, 0.28, 0.50, 0.70, 0.99, 0.99]
+},
+{
+"name": "a_params",
+"label": "Auditory", 
+"abbreviation": "A",
+"data": [0.01, 0.04, 0.23, 0.94, 0.99]
+},
+{
+"name": "v_params",
+"label": "Visual", 
+"abbreviation": "V",
+"data": [0.03, 0.44, 0.82, 0.93, 0.97]
+},
+{
+"name": "bias",
+"label": "Bias", 
+"abbreviation": "B", 
+"data": [0.5]
+}
+]
