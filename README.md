@@ -60,30 +60,30 @@ To input data, you will need to create or modify files in the UserData folder. I
 
 ```json
 [
-	{
-		"name": "parameter1", 
-		"label": "Parameter 1",
-        "abreviation": "P1",
-		"data": [1, 2]
-	},
-	{
-		"name": "parameter2", 
-		"label": "Parameter 2",
-        "abreviation": "P2",
-		"data": [3, 4]
-	}, 
-	{
-		"name": "extraParmeter", 
-		"label": "Extra Parameter",
-        "abreviation": "Extra",
-		"data": [5, 6]
-	}, 
-	{
-		"name": "composite", 
-		"label": "Bimodal",
-        "abreviation": "P1*P2",
-		"data": [3, 4, 6, 8]
-	}
+{
+"name": "composite", 
+"label": "composite", 
+"abbreviation": "c", 
+"data": [0.4, 0.5, 0.6, 0.8, 0.10, 0.12, 0.12, 0.15, 0.18]
+},
+{
+"name": "parameter1", 
+"label": "Parameter 1", 
+"abbreviation": "P1", 
+"data": [0.1, 0.2, 0.3]
+},
+{
+"name": "parameter2",
+"label": "Parameter 2", 
+"abbreviation": "P2",  
+"data": [0.4, 0.5, 0.6]
+},
+{
+"name": "parameter3", 
+"label": "Parameter 3", 
+"abbreviation": "P3", 
+"data": [0.7, 0.8, 0.9]
+}
 ]
 ```
 
@@ -98,7 +98,7 @@ Within these sections, you should include the following:
     * For parameter sections, this should be the same as the input parameter passed to your model.
     * For the composite section, this should be "composite". If it is named something else, this section will not be recognized correctly. 
 * The **label** fields are nicely formatted versions of the name. These will be used in the result file and graph when displaying data. 
-* The **abreviation** fields are shortened versions of the label or name. They are also used to display data. 
+* The **abbreviation** fields are shortened versions of the label or name. They are also used to display data. 
 * The **data** fields should include a list of observed values. 
     * Your model prediction will be fit against all values (the parameters and composite combined). 
     
