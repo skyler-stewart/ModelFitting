@@ -167,7 +167,17 @@ Do not modify section titles or option names. Only modify text directly after th
 Now we can fit our models. To run the program, navigate to the main directory (called ModelFitting). Then run the following command. 
 
 ```
-$ runModelFitting 
+$ ./runmodelfitting.sh
+```
+If this doesn't work, you may need to do the following first: 
+```
+$ chmod +x runmodelfitting.sh
+```
+
+Alternatively, you may simply navigate into the ProgramFiles directory and run the program directly:
+```
+$ cd ProgramFiles
+$ python3 commandline.py
 ```
 
 ## Results 

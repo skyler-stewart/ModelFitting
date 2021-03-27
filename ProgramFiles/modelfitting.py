@@ -19,7 +19,7 @@ from pathlib import Path
 from collections.abc import Iterable
 
 from models import * 
-from fileParser import * 
+from fileparser import * 
 
 # Main interface 
 def runModelFitting(settings, data):

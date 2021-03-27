@@ -8,11 +8,12 @@ Command line interface for model fitting.
 import sys
 import os
 import configparser
+import inspect 
 from pathlib import Path
 
 from models import * 
-from modelfitting import *
-from fileParser import * 
+from modelfitting import * 
+from fileparser import * 
 
 # Main Interface #
 
@@ -42,7 +43,7 @@ def runAll():
 	# Set and fill in default settings
 	setAllDefaults(defaultSettingsFile, model) 
 	fillInDefaults(userSettingsFile, defaultSettingsFile)
-	
+
 	# Run program (interactive or non-interactive)
 	if interactive: 
 		print("\nRunning in interactive mode. See README for instructions.\n")

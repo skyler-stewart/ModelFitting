@@ -9,6 +9,7 @@ import configparser
 import json
 from pathlib import Path
 from datetime import date
+
 from models import * 
 
 # Globals # 
@@ -97,6 +98,7 @@ def getSettings(filepath):
 			if option == 'verbose' or option == 'interactive':
 				settings[section][option] = parser.getboolean(section, option)
 
+			# Check that a data file is provided 
 			try:
 				if option == 'data_filename':
 					file = parser.get('data_settings', 'data_filename')
@@ -105,6 +107,7 @@ def getSettings(filepath):
 				print("Error: You must provide a data file. See the README file for instructions.")
 				sys.exit(1)
 
+			# Check that options are the right kind and that we can acess them 
 			try: 
 				if option == 'verbose':
 					v = parser.get('general_settings', 'verbose')
@@ -117,7 +120,6 @@ def getSettings(filepath):
 			except: 
 				print("Something went wrong. Ensure that all section and option names in settings.ini have not been modified.")
 				sys.exit(1)
-
 	return settings
 
 # Sets all default settings
