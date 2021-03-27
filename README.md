@@ -1,6 +1,6 @@
 # Model Fitting 
 
-This is a command line program for model fitting with full factorial models of two factors. Factors may have any number of discrete levels. 
+This is a command line program for model fitting. We currently support full factorial designs of two factors. Factors may have any number of discrete levels. 
 
 Parameter optimization uses scipy least squares optimization: 
 https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html 
@@ -8,7 +8,13 @@ https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_square
 
 ## Installation 
 
-Download this github repository. 
+You will need Python3 installed to run this application. You can find it here: https://www.python.org/
+
+Clone this github repository. Then navigate to the main ModelFitting directory and run the following command: 
+```
+pip3 install -r requirements.txt 
+```
+This will install all necessary dependencies. Now the application is installed, and you can begin creating models. 
 
 ## Overview 
 
