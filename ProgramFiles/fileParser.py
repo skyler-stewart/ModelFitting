@@ -16,6 +16,12 @@ from models import *
 today = date.today() 
 
 # Filepaths 
+global programFolder
+global dataFolder 
+global resultsFolder 
+global userSettingsFile 
+global defaultSettingsFile 
+
 programFolder = Path("./ProgramFiles")
 dataFolder = Path("../UserData")
 resultsFolder = Path("../UserResults")
