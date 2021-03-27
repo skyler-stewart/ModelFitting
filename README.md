@@ -1,6 +1,6 @@
 # Model Fitting 
 
-This is a command line program for model fitting. We currently support full factorial designs of two factors. Factors may have any number of discrete levels. 
+This is a command line application for model fitting. We currently support full factorial designs of two factors. Factors may have any number of discrete levels. 
 
 Parameter optimization uses scipy least squares optimization: 
 https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html 
