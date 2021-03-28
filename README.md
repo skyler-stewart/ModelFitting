@@ -40,7 +40,7 @@ Contains the application code. The models.py file is located in this directory. 
 To create a model, you will need to modify the models.py file. Here is an example of a model. We provide comments corresponding the the line number below.  
 
 ```python
-# Note: The example model and example data are not 
+# Note: The following is not a real model. It is simply provided as an example. 
 1 def exampleModel(parameter1, parameter2): 
 2    prediction = []
 3	for p1 in parameter1:
