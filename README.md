@@ -18,7 +18,7 @@ This will install all necessary dependencies. Now the application is installed, 
 
 ## Overview 
 
-The following are important files and directories contained in the application. You will need to modify some of these files. 
+The following are important files and directories contained in the application. You will need to modify some of these files before running the program.  
 
 **settings.ini**  
 Where you define the program settings. You will need to modify this file. 
@@ -33,13 +33,14 @@ Where you place data files. You will need to modify this folder's contents.
 Where the results will appear. Results include a text summary and a graph.
 
 **ProgramFiles**  
-Contains the application code. The models.py file is located in this directory. Modify other files at your own risk. 
+Contains the application code. The models.py file is located in this directory. Do not modify other files in this folder. 
 
 ## Creating a Model 
 
 To create a model, you will need to modify the models.py file. Here is an example of a model. We provide comments corresponding the the line number below.  
 
 ```python
+# Note: The example model and example data are not 
 1 def exampleModel(parameter1, parameter2): 
 2    prediction = []
 3	for p1 in parameter1:
@@ -93,7 +94,7 @@ To input data, you will need to create or modify files in the UserData folder. I
 ]
 ```
 
-You should include a section for each parameter in your model, as well as a **composite** section. You may include additional sections if you wish; only parameters included current model will be used. 
+You should include a section for **each parameter** in your model, as well as a **composite** section. If you do not include these sections, errors may occur. You may include additional sections if you wish; only parameters included current model will be used. 
 
 * The **parameter** fields are the observed values for each parameter. 
 * The **composite** field are the observed values for every combination of pararmeters. 
@@ -101,11 +102,11 @@ You should include a section for each parameter in your model, as well as a **co
 Within these sections, you should include the following: 
 
 * The **name** fields are the section names. 
-    * For parameter sections, this should be the same as the input parameter passed to your model.
-    * For the composite section, this should be "composite". If it is named something else, this section will not be recognized correctly. 
+    * For parameter sections, this should be the same as the input parameter passed to your model. Note that this is case-sensitive, so "Parameter1" is not the same as "parameter1". 
+    * For the composite section, the name should be "composite". If it is named something else, this section will not be recognized correctly, and errors may occur. 
 * The **label** fields are nicely formatted versions of the name. These will be used in the result file and graph when displaying data. 
 * The **abbreviation** fields are shortened versions of the label or name. They are also used to display data. 
-* The **data** fields should include a list of observed values. 
+* The **data** fields should include a list of observed values. All values should be in range [0, 1] inclusive. 
     * Your model prediction will be fit against all values (the parameters and composite combined). 
     
 ## Settings
@@ -153,7 +154,7 @@ verbose = False
 rounding = 3
 
 [data_settings]
-data_filename = exampleData.json
+data_filename = exampledata.json
 result_filename = Result_exampleData_exampleModel
 model_number = 0
 
@@ -166,7 +167,7 @@ graph_legend_label = Legend Label
 
 ```
 
-Do not modify section titles or option names. Only modify text directly after the "=" sign. 
+Do not modify section titles or option names. Only modify text directly after the "=" sign.
 
 ## Model Fitting
 
