@@ -6,15 +6,44 @@ Parameter optimization uses scipy least squares optimization:
 https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html 
 
 
-## Installation 
+## Installation (MacOS and Linux)
 
-You will need Python3 installed to run this application. You can find it here: https://www.python.org/
+1. Clone (download) this GitHub repository. Use the green download button at the top of this page. 
 
-Clone this github repository. Then navigate to the main ModelFitting directory and run the following command: 
+2. You will also need Python3 installed to run this application. You can find it here: https://www.python.org/downloads/. Download and open the Python3 installer.
+
+3. Using the Terminal application on your computer, navigate to the main ModelFitting directory. To do this, you will use a command similar to the following. This may be different depending on your operating system and download location. 
+```
+cd /Users/Username/Downloads/ModelFitting
+```
+
+4. Install all necessary dependencies. Run the following command: 
 ```
 pip3 install -r requirements.txt 
 ```
-This will install all necessary dependencies. Now the application is installed, and you can begin creating models. 
+
+Installation is now complete. Follow the instructions below to create and fit models. 
+
+
+## Installation (Windows)
+
+1. Clone (download) this GitHub repository. Use the green download button at the top of this page.
+
+2. You will also need Python3 installed to run this program. We recommend using a miniConda environment. You can find the minConda installers here: https://docs.conda.io/en/latest/miniconda.html 
+
+3. Create and enter a miniConda environment using the Anaconda Prompt application. Run the following commands in Anaconda Prompt: 
+```
+conda create --name myenv
+activate myenv
+```
+
+4. Install pip3 and download dependencies using the following commands: 
+```
+conda install pip3
+pip3 install -r requirements.txt 
+```
+
+Installation is now complete. Follow the instructions below to create and fit models. 
 
 ## Overview 
 
@@ -153,7 +182,7 @@ verbose = False
 rounding = 3
 
 [data_settings]
-data_filename = exampleData.json
+data_filename = exampledata.json
 result_filename = Result_exampleData_exampleModel
 model_number = 0
 
